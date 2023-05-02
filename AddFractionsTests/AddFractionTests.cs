@@ -44,5 +44,6 @@ public class AddFractionTests {
     [Fact]
     public void SumFractions_WithNegative() {
         Assert.Equal(new Fraction(3, 8), new Fraction(2, 4).Add(new Fraction(-1, 8)));
+        Assert.Equal(new Fraction(5, 12), new Fraction(3, 4).Add(new Fraction(1, -3)));
     }
 }

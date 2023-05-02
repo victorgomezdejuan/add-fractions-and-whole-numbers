@@ -13,7 +13,16 @@ public class Fraction {
     public Fraction Add(Fraction addend)
         => Reduce(new(enumerator * addend.denominator + addend.enumerator * denominator, denominator * addend.denominator));
 
-    private static Fraction Reduce(Fraction fraction) {
+    private static Fraction Reduce(Fraction fraction) => ReduceSign(ReduceGreatestCommonDivisor(fraction));
+
+    private static Fraction ReduceSign(Fraction fraction) {
+        if (fraction.enumerator < 0 && fraction.denominator < 0)
+            return new Fraction(fraction.enumerator * (-1), fraction.denominator * (-1));
+
+        return fraction.Clone();
+    }
+
+    private static Fraction ReduceGreatestCommonDivisor(Fraction fraction) {
         int minValue = Math.Min(fraction.enumerator, fraction.denominator);
 
         for (int i = minValue; i > 1; i--) {
