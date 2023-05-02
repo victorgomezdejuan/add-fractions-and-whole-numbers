@@ -13,8 +13,11 @@ public class Fraction {
         this.denominator = denominator;
     }
 
-    public Fraction Add(Fraction fraction) {
-        return new(enumerator + fraction.enumerator);
+    public Fraction Add(Fraction addend) {
+        if (denominator != addend.denominator)
+            return new(enumerator * addend.denominator + addend.enumerator * denominator, denominator * addend.denominator);
+
+        return new(enumerator + addend.enumerator);
     }
 
     public override bool Equals(object? obj) {

@@ -25,4 +25,9 @@ public class AddFractionTests {
     public void SumFractions_SameDenominator() {
         Assert.Equal(new Fraction(3, 5), new Fraction(1, 5).Add(new Fraction(2, 5)));
     }
+
+    [Fact]
+    public void SumFractions_DifferentDenominator() {
+        Assert.Equal(new Fraction(7, 6), new Fraction(2, 3).Add(new Fraction(1, 2)));
+    }
 }
