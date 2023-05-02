@@ -22,7 +22,7 @@ public class Fraction {
             }
         }
 
-        return fraction;
+        return fraction.Clone();
     }
 
     public override bool Equals(object? obj) {
@@ -39,4 +39,8 @@ public class Fraction {
     public override int GetHashCode() => enumerator ^ denominator;
 
     public override string ToString() => $"{enumerator}/{denominator}";
+
+    public Fraction Clone() {
+        return new Fraction(enumerator, denominator);
+    }
 }
