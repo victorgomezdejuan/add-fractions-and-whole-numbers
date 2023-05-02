@@ -4,7 +4,9 @@ public class Fraction {
 
     public Fraction(int value) => this.value = value;
 
-    public Fraction Add(Fraction fraction) => new(1);
+    public Fraction Add(Fraction fraction) {
+        return new(value + fraction.value);
+    }
 
     public override bool Equals(object? obj) {
         if (obj is null) {
@@ -17,7 +19,7 @@ public class Fraction {
         return value == ((Fraction)obj).value;
     }
 
-    public override int GetHashCode() {
-        return value.GetHashCode();
-    }
+    public override int GetHashCode() => value.GetHashCode();
+
+    public override string ToString() => value.ToString();
 }
