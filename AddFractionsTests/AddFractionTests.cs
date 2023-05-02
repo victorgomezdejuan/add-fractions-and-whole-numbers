@@ -30,4 +30,9 @@ public class AddFractionTests {
     public void SumFractions_DifferentDenominator() {
         Assert.Equal(new Fraction(7, 6), new Fraction(2, 3).Add(new Fraction(1, 2)));
     }
+
+    [Fact]
+    public void SumFractions_Reduce() {
+        Assert.Equal(new Fraction(3, 5), new Fraction(5, 25).Add(new Fraction(10, 25)));
+    }
 }

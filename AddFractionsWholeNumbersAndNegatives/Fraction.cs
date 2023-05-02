@@ -10,11 +10,19 @@ public class Fraction {
         this.denominator = denominator;
     }
 
-    public Fraction Add(Fraction addend) {
-        if (denominator != addend.denominator)
-            return new(enumerator * addend.denominator + addend.enumerator * denominator, denominator * addend.denominator);
+    public Fraction Add(Fraction addend)
+        => Reduce(new(enumerator * addend.denominator + addend.enumerator * denominator, denominator * addend.denominator));
 
-        return new(enumerator + addend.enumerator);
+    private static Fraction Reduce(Fraction fraction) {
+        int minValue = Math.Min(fraction.enumerator, fraction.denominator);
+
+        for (int i = minValue; i > 1; i--) {
+            if (fraction.enumerator % i == 0 && fraction.denominator % i == 0) {
+                return new(fraction.enumerator / i, fraction.denominator / i);
+            }
+        }
+
+        return fraction;
     }
 
     public override bool Equals(object? obj) {
@@ -28,7 +36,7 @@ public class Fraction {
         return enumerator == ((Fraction)obj).enumerator;
     }
 
-    public override int GetHashCode() => enumerator.GetHashCode();
+    public override int GetHashCode() => enumerator ^ denominator;
 
-    public override string ToString() => enumerator.ToString();
+    public override string ToString() => $"{enumerator}/{denominator}";
 }
