@@ -1,11 +1,20 @@
 ﻿namespace AddFractionsWholeNumbersAndNegatives;
 public class Fraction {
-    private int value;
+    private readonly int enumerator;
+    private readonly int denominator;
 
-    public Fraction(int value) => this.value = value;
+    public Fraction(int value) {
+        enumerator = value;
+        denominator = 1;
+    }
+
+    public Fraction(int enumerator, int denominator) {
+        this.enumerator = enumerator;
+        this.denominator = denominator;
+    }
 
     public Fraction Add(Fraction fraction) {
-        return new(value + fraction.value);
+        return new(enumerator + fraction.enumerator);
     }
 
     public override bool Equals(object? obj) {
@@ -16,10 +25,10 @@ public class Fraction {
         if (obj is not Fraction) {
             return false;
         }
-        return value == ((Fraction)obj).value;
+        return enumerator == ((Fraction)obj).enumerator;
     }
 
-    public override int GetHashCode() => value.GetHashCode();
+    public override int GetHashCode() => enumerator.GetHashCode();
 
-    public override string ToString() => value.ToString();
+    public override string ToString() => enumerator.ToString();
 }

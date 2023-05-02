@@ -20,4 +20,9 @@ public class AddFractionTests {
         Assert.Equal(new Fraction(1), new Fraction(2).Add(new Fraction(-1)));
         Assert.Equal(new Fraction(-3), new Fraction(-1).Add(new Fraction(-2)));
     }
+
+    [Fact]
+    public void SumFractions_SameDenominator() {
+        Assert.Equal(new Fraction(3, 5), new Fraction(1, 5).Add(new Fraction(2, 5)));
+    }
 }
