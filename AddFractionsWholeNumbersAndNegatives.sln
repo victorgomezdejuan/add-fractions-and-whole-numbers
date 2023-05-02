@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddFractionsWholeNumbersAndNegatives", "AddFractionsWholeNumbersAndNegatives\AddFractionsWholeNumbersAndNegatives.csproj", "{28694D0A-65FC-4E09-B3D7-CE3F8CE6FEB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddFractionsTests", "AddFractionsTests\AddFractionsTests.csproj", "{16ECE4E1-F570-4D4E-8476-8AEA7A9B68F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28694D0A-65FC-4E09-B3D7-CE3F8CE6FEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28694D0A-65FC-4E09-B3D7-CE3F8CE6FEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28694D0A-65FC-4E09-B3D7-CE3F8CE6FEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28694D0A-65FC-4E09-B3D7-CE3F8CE6FEB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16ECE4E1-F570-4D4E-8476-8AEA7A9B68F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16ECE4E1-F570-4D4E-8476-8AEA7A9B68F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16ECE4E1-F570-4D4E-8476-8AEA7A9B68F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16ECE4E1-F570-4D4E-8476-8AEA7A9B68F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94D9E2D9-357F-4EC7-9917-03C0EA1FF5E1}
+	EndGlobalSection
+EndGlobal
