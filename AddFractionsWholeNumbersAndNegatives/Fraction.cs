@@ -3,10 +3,7 @@ public class Fraction {
     private readonly int enumerator;
     private readonly int denominator;
 
-    public Fraction(int value) {
-        enumerator = value;
-        denominator = 1;
-    }
+    public Fraction(int value) : this(value, 1) { }
 
     public Fraction(int enumerator, int denominator) {
         this.enumerator = enumerator;
