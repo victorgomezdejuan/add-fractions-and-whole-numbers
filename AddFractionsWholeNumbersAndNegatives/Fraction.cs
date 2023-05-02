@@ -16,7 +16,8 @@ public class Fraction {
     private static Fraction Reduce(Fraction fraction) => ReduceSign(ReduceGreatestCommonDivisor(fraction));
 
     private static Fraction ReduceSign(Fraction fraction) {
-        if (fraction.enumerator < 0 && fraction.denominator < 0)
+        if ((fraction.enumerator < 0 && fraction.denominator < 0) ||
+            (fraction.enumerator > 0 && fraction.denominator < 0))
             return new Fraction(fraction.enumerator * (-1), fraction.denominator * (-1));
 
         return fraction.Clone();

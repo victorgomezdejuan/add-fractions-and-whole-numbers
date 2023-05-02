@@ -47,5 +47,6 @@ public class AddFractionTests {
         Assert.Equal(new Fraction(5, 12), new Fraction(3, 4).Add(new Fraction(1, -3)));
         Assert.Equal(new Fraction(-1, 12), new Fraction(1, 4).Add(new Fraction(-1, 3)));
         Assert.Equal(new Fraction(-7, 6), new Fraction(-1, 2).Add(new Fraction(-2, 3)));
+        Assert.Equal(new Fraction(-7, 6), new Fraction(-1, 2).Add(new Fraction(2, -3)));
     }
 }
