@@ -65,4 +65,10 @@ public class AddFractionTests {
     public void SumFractions_ReduceToWholeNumberWithNegative() {
         Assert.Equal(new Fraction(-1), new Fraction(1, 2).Add(new Fraction(-3, 2)));
     }
+
+    [Fact]
+    public void SumFractionAndZero() {
+        Assert.Equal(new Fraction(1, 2), new Fraction(1, 2).Add(new Fraction(0)));
+        Assert.Equal(new Fraction(1, 2), new Fraction(0).Add(new Fraction(1, 2)));
+    }
 }
