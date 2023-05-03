@@ -71,4 +71,10 @@ public class AddFractionTests {
         Assert.Equal(new Fraction(1, 2), new Fraction(1, 2).Add(new Fraction(0)));
         Assert.Equal(new Fraction(1, 2), new Fraction(0).Add(new Fraction(1, 2)));
     }
+
+    [Fact]
+    public void SumFractionAndWholeNumber() {
+        Assert.Equal(new Fraction(3, 2), new Fraction(1, 2).Add(new Fraction(1)));
+        Assert.Equal(new Fraction(3, 2), new Fraction(1).Add(new Fraction(1, 2)));
+    }
 }
