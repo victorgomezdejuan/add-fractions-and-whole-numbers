@@ -24,7 +24,7 @@ public class Fraction {
     }
 
     private static Fraction ReduceGreatestCommonDivisor(Fraction fraction) {
-        int minValue = Math.Min(fraction.enumerator, fraction.denominator);
+        int minValue = Math.Abs(Math.Min(fraction.enumerator, fraction.denominator));
 
         for (int i = minValue; i > 1; i--) {
             if (fraction.enumerator % i == 0 && fraction.denominator % i == 0) {

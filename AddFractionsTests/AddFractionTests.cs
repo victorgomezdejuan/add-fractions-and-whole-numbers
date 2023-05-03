@@ -52,12 +52,17 @@ public class AddFractionTests {
     }
 
     [Fact]
-    public void Sum_Fractions_RedudeToZero() {
+    public void SumFractions_RedudeToZero() {
         Assert.Equal(new Fraction(0), new Fraction(1, 2).Add(new Fraction(-1, 2)));
     }
 
     [Fact]
-    public void Sum_Fractions_ReduceToWholeNumber() {
+    public void SumFractions_ReduceToWholeNumber() {
         Assert.Equal(new Fraction(1), new Fraction(1, 2).Add(new Fraction(1, 2)));
+    }
+
+    [Fact]
+    public void SumFractions_ReduceToWholeNumberWithNegative() {
+        Assert.Equal(new Fraction(-1), new Fraction(1, 2).Add(new Fraction(-3, 2)));
     }
 }
