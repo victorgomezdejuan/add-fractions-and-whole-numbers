@@ -50,4 +50,9 @@ public class AddFractionTests {
         Assert.Equal(new Fraction(-7, 6), new Fraction(-1, 2).Add(new Fraction(-2, 3)));
         Assert.Equal(new Fraction(-7, 6), new Fraction(-1, 2).Add(new Fraction(2, -3)));
     }
+
+    [Fact]
+    public void Sum_Fractions_RedudeToZero() {
+        Assert.Equal(new Fraction(0), new Fraction(1, 2).Add(new Fraction(-1, 2)));
+    }
 }
